@@ -1,0 +1,30 @@
+def fibo(n):
+    if(n<=1):
+        return 1
+    return fibo(n-1)+fibo(n-2)
+
+def mul (n, m):
+    if (m == 2):
+        return n+n
+    if(m==1):
+        return n
+    if m== 0:
+        return 0
+    return mul (n,m-1)+ n
+
+def div (n,m):
+    if m ==0:
+        return "error"
+    if m == 1:
+        return n
+    if n-m < m:
+        return 1
+    return 1 + div(n-m , m) 
+def pot (n,m):
+    if m == 0:
+        return 1
+    if m == 1:
+        return n
+    if m == 2:
+        return n*n
+    return pot(n, m-1)* n
