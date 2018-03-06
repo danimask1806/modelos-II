@@ -20,6 +20,7 @@ def div (n,m):
     if n-m < m:
         return 1
     return 1 + div(n-m , m) 
+    
 def pot (n,m):
     if m == 0:
         return 1
@@ -28,3 +29,43 @@ def pot (n,m):
     if m == 2:
         return n*n
     return pot(n, m-1)* n
+
+def DM( Num):
+    if Num < 10:
+        return Num;
+    elif (Num%10)<=DM(Num//10):
+        return DM(Num//10);
+    else:
+        return Num%10
+
+
+
+def invertir(num,inver):
+    if num == 0:
+        return inver
+    else:
+        return invertir(num//10,inver*10+num % 10)
+    
+
+print(multiplicacion(5,12))
+
+
+def longitud(num):
+    if num/10<1:
+        return    1
+    else:
+        return 1+longitud(num/10)
+
+def palindromo(n):
+    if len(str(n))<=1:
+       return True
+    elif str(n)[0]==str(n)[len(str(n))-1]:
+    	  return palindromo(str(n)[1:len(str(n))-1])
+    else:
+        return False
+
+def sd(num):
+    if(num == 0):
+        return 0
+    else:
+        return (num%10)+sd(num/10)
